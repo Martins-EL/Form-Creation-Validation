@@ -27,13 +27,8 @@ document.addEventListener("DOMContentLoaded", function () {
       feedbackDiv.textContent = "Registration successful!";
       feedbackDiv.style.color = "#28a745";
     } else {
-      let paragraph = "";
-      for (let i = 0; i < messages.length; i++) {
-        
-        paragraph += messages[i];
-        paragraph +="<br>"
-      }
-      feedbackDiv.innerHTML = `<p>${paragraph}</p>`;
+      
+      feedbackDiv.innerHTML = messages.join("<br>")
       feedbackDiv.style.color = "#dc3545";
     }
   });
